@@ -31,7 +31,8 @@ public class UtenteRestController {
         return repository.findById(id).orElseThrow(
                 () -> new UtenteNonTrovato(id));
     }
-    @PostMapping("/utente")
+    @PostMapping("/utente" +
+            "")
     public Utente inserisciUnNuovoUtente(@RequestBody Utente nuovoUtente){
         return repository.save(nuovoUtente);
     }
